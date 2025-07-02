@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -108,7 +109,7 @@ namespace CISimageSaveBD
 
             foreach (var file in files)
             {
-                using (var mat = Cv2.ImRead(file))
+                using (var mat = Cv2.ImRead(file, ImreadModes.Grayscale))
                 {
                     if (mat.Empty())
                         continue;
@@ -164,7 +165,7 @@ namespace CISimageSaveBD
                     odd.Dispose();
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
-
+                    Thread.Sleep(300);
                     count++;
                 }
             }
