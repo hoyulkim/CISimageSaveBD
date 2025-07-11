@@ -54,7 +54,7 @@ namespace CISimageSaveBD
             this.chkSaveOdd.Location = new System.Drawing.Point(250, 80);
             this.chkSaveOdd.Size = new System.Drawing.Size(80, 23);
             this.chkSaveOdd.Text = "어두운 이미지 저장";
-            this.chkSaveOdd.Checked = false; // 기본값 ON
+            this.chkSaveOdd.Checked = true; // 기본값 ON
             this.Controls.Add(this.chkSaveOdd);
 
             // 짝수(EVEN) 체크박스
